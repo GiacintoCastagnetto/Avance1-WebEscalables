@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importamos tipografías agradables de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+
+/* Definimos variables para la paleta de colores oscura (inspirada en Letterboxd) */
+:root {
+  --bg-color: #14181c;          /* Fondo muy oscuro */
+  --card-bg-color: #1e293b;     /* Fondo de tarjetas */
+  --text-primary: #94a3b8;      /* Texto gris claro */
+  --text-highlight: #ffffff;    /* Texto blanco */
+  --accent-color: #00e054;      /* Verde brillante (acento) */
+  --secondary-accent: #ff8000;   /* Naranja brillante (acento) */
+  
+  /* Tipografías */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text-highlight);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Estilo responsivo básico para imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+}

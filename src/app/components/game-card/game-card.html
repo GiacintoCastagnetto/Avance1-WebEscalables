@@ -1,0 +1,13 @@
+<a [routerLink]="['/game', id()]" class="game-card">
+    <div class="cover-wrapper">
+        <img [src]="coverUrl()" [alt]="title()" class="game-cover">
+        <div class="overlay">
+            </div>
+    </div>
+    <h4 class="game-title">{{ title() }}</h4>
+    <div class="rating-bar">
+        @for (star of [1,2,3,4,5]; track star) {
+            <span class="star-placeholder"></span>
+        }
+    </div>
+</a>

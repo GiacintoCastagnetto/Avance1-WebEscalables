@@ -1,0 +1,25 @@
+<main class="home-page container">
+    <section class="hero">
+        <h1 class="hero-title">Track every game you've played.</h1>
+        <h1 class="hero-title hero-accent">Save those you want to play.</h1>
+        <p class="hero-subtitle">The social network for video game lovers.</p>
+        <a routerLink="/" class="btn-get-started">GET STARTED — IT'S FREE</a>
+    </section>
+
+    <section class="popular-games">
+        <div class="section-header">
+            <h2>Popular Games This Week</h2>
+            <a routerLink="/games" class="view-more">More</a>
+        </div>
+        
+        <div class="game-grid">
+            @for (game of popularGames; track game.id) {
+                <app-game-card 
+                    [id]="game.id" 
+                    [title]="game.title" 
+                    [coverUrl]="game.cover">
+                </app-game-card>
+            }
+        </div>
+    </section>
+</main>
